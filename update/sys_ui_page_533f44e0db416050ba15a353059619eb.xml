@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_snc_downloads_Start.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div style="
+	padding-left: 20px;
+	">
+	
+	<g2:evaluate var="jvar_strTitle" jelly="true">
+		var grApp = new GlideRecord('sys_app');
+		grApp.addQuery('sys_id','=','1d2ada8c1b09ec10a89720a8ec4bcb79');
+		grApp.query();
+
+		var strTitle = '';
+		while (grApp.next())
+		{
+			strTitle = '<h1>'+grApp.getValue('name')+' '+grApp.getValue('version')+'</h1>';
+		}
+		strTitle;	
+	</g2:evaluate>
+	<g2:no_escape>$[jvar_strTitle]</g2:no_escape>	
+
+	<p>Welcome to Downloads - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
+	<p>The Downloads application provides access to downloadable files to users. Each "Download" is a record to which access can be managed and files can be attached to. The Downloads app can reassign files that are created in Scheduled Data Exports to a Download record.</p>
+	
+	<h2>System Requirements</h2>
+	<ul>
+		<li>TODO: Madrid, New York, Orlando or Paris</li>
+		<li><a href="https://github.com/saschawildgrube/servicenow-devtools/" target="_blank">DevTools 1.6.0</a></li>
+	</ul>
+	
+	<h2>Disclaimer</h2>
+	<p>DataSilos is&#160;<b>NOT</b>&#160;an officially supported ServiceNow product.</p>
+	<p>DataSilos does&#160;<b>NOT</b>&#160;come with any kind of warranty. If you use it, you own it!</p>
+
+	
+	<h2>Implementation guide</h2>
+
+	<h3>Installation</h3>
+	<ol>
+		<li>Install the Downloads application. If you see this installation guide within the ServiceNow instance, you did this already. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-downloads" target="_blank">repository</a>&#160;and then import the application from source control.</li>
+		<li>Install the DevTools application. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">repository</a>&#160;and then import the application from source control.</li>
+		<li>Check the DevTools version. If a different (more recent) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
+		<li>Follow the installation instruction contained in DevTools/Start.</li>
+		<li>TODO: Anything else?</li>
+	</ol>
+	<h3>Configuration</h3>
+	<ol>
+		<li>Assign the x_snc_datasilos.admin role to users who are tasked to configure the downloads.</li>
+		<li>As a data silos admin go to the "Downloads" module and set up the download records.</li>
+		<li>TODO</li>
+		<li>Assign the x_snc_downloads.user role to those users who should have read-only access to downloads.</li>
+	</ol>
+
+<h2>Roles</h2>
+	<p>Downloads supports the following roles:</p>
+	<ul>
+		<li><b>x_snc_downloads.admin</b>&#160;A user that has access to all Downloads administration and configuration modules. Includes the&#160;<b>x_snc_datasilos.user</b>&#160;role.</li>
+		<li><b>x_snc_downloads.user</b>&#160;A user that can download files.</li>
+	</ul>
+
+	<!--
+		<h2>Configuration Options</h2>
+	<ul>
+	<g2:evaluate var="jvar_strProperties" jelly="true">
+		var HtmlEncode = x_snc_devtools.HtmlEncode;
+		var grSP = new GlideRecord('sys_properties');
+		grSP.addQuery('sys_scope','=','dafbffebdbb78450ba15a353059619eb');
+		grSP.orderBy('name');
+		grSP.query();
+
+		var strProperties = '';
+		while (grSP.next())
+		{
+			var strDescription = HtmlEncode(grSP.getValue('description'));
+		strProperties = strProperties + '<li><b>'+grSP.getValue('name')+'</b>&#160;'+strDescription+'</li>';
+		}
+		strProperties;	
+	</g2:evaluate>
+	<g2:no_escape>$[jvar_strProperties]</g2:no_escape>
+	</ul>
+	
+	<h2>Column Fields</h2>
+	<p>Each supported table is equipped with a number of new column fields:</p>
+	<ul>
+		<li><b>x_snc_datasilos_group_whitelist</b>&#160;The group whitelist field stores a list of groups which should have access to the record.</li>
+		<li><b>x_snc_datasilos_supervisor_whitelist</b>&#160;The supervisor whitelist field stores a list of data silos. The users in the supervisor groups within the data silos will be able to access the record.</li>
+		<li><b>x_snc_datasilos_global</b>&#160;The global visibility flag controls if this record should be globally visible - i.e. it can be seen by all users without any exception. This flag can be useful to make very important incidents public to everyone.</li>
+		<li><b>x_snc_datasilos_ghost</b>&#160;The ghost flag controls if the record's whitelists should be updated. If set to false, whitelists are populated. If the ghost flag is true, whitelists remain unchanged. This allows custom implementations to control the whitelist population. If this flag is set to true, the record behaves in the same way as if it was changed by a user with the x_snc_datasilos.ghost role.</li>
+	</ul>
+
+-->
+
+	<!--
+	<h2>FAQ</h2>
+	<h3>TODO</h3>
+	<p>TODO</p>
+	-->
+	
+		
+	<h2>Release Notes</h2>
+	<h3>1.0.0 - 2020-TODO</h3>
+	<p>First baselined version with support for incidents and change requests.</p>
+</div>
+</j:jelly>]]></html>
+        <name>Start</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-09 10:47:22</sys_created_on>
+        <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Start</sys_name>
+        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-09 11:01:04</sys_updated_on>
+    </sys_ui_page>
+</record_update>
