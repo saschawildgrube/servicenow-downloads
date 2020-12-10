@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Basic Export Set Functionality" source="com.glide.system_export_set">02ba6a5c6107101091f9f50378a16b7a</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-10 09:16:33</sys_created_on>
+        <sys_id>7214c1fc1b0d2c10fb896284bb4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-10 09:16:33</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
