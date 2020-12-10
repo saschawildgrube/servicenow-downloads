@@ -47,13 +47,25 @@
 		<li>Install the DevTools application. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">repository</a>&#160;and then import the application from source control.</li>
 		<li>Check the DevTools version. If a different (more recent) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
 		<li>Follow the installation instruction contained in DevTools/Start.</li>
-		<li>TODO: Anything else?</li>
+		<li>For the time being (due to some weird cross-scope issues) a global business rule must be created: Make an exact copy of the "Downloads - Intercept Attachments" business rule from the "Downloads" scope in the global scope. Then the function ExecuteBusinessRule() (contained in the script include) must be copied into the business rule code. The scope prefix of the function call must also be removed. The code of the new global business rule should look like this: 
+<pre>
+(function executeRule(current, previous /*null when async*/) {
+
+ExecuteBusinessRule(current);
+	
+function ExecuteBusinessRule(record)
+{
+	[...]
+}
+
+})(current, previous);
+</pre></li>
 	</ol>
 	<h3>Configuration</h3>
 	<ol>
 		<li>Assign the x_snc_datasilos.admin role to users who are tasked to configure the downloads.</li>
 		<li>As a data silos admin go to the "Downloads" module and set up the download records.</li>
-		<li>TODO</li>
+		<li>Then you can configure export sets to deliver a file not only to a mid server but also to a defined download record.</li>
 		<li>Assign the x_snc_downloads.user role to those users who should have read-only access to downloads.</li>
 	</ol>
 
@@ -114,13 +126,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Start</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-12-09 11:01:04</sys_updated_on>
+        <sys_updated_on>2020-12-10 10:00:09</sys_updated_on>
     </sys_ui_page>
 </record_update>

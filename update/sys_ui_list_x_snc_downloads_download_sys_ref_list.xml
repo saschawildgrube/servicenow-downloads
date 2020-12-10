@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_snc_downloads_download" element="NULL" name="x_snc_downloads_download" parent="NULL" relationship="NULL" sys_domain="global" view="40e462506103101091f9f50378a16b2e">f2afece4dbc16050ba15a35305961928</list_id>
+            <list_id display_value="x_snc_downloads_download" element="NULL" name="x_snc_downloads_download" parent="NULL" relationship="NULL" sys_domain="global" view="d1af12621b120010a89720a8ec4bcbba">f2afece4dbc16050ba15a35305961928</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -40,7 +40,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2020-12-09 13:08:47</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">40e462506103101091f9f50378a16b2e</view>
+            <view display_value="Reference List" name="sys_ref_list">d1af12621b120010a89720a8ec4bcbba</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>
