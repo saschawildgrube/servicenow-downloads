@@ -53,7 +53,7 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:13:45</sys_created_on>
-        <sys_id>e9545828db416050ba15a3530596193e</sys_id>
+        <sys_id>20a485381b41a050a89720a8ec4bcb84</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Name</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_downloads_download_name</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-12-09 11:13:45</sys_updated_on>
+        <sys_updated_on>2020-12-10 09:18:53</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
