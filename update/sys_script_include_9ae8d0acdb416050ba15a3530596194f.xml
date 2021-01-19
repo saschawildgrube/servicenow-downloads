@@ -86,14 +86,21 @@
 	
 					Debug('...there should not be any attachments left on the download record.');
 				
+					// Create the attachment in the download record:
 					
+					gsa.copy('ecc_agent_attachment',grEAA.sys_id,'x_snc_downloads_download',strDownloadSysId);
+					/*
 					Debug('sys_attachment: '+RenderValue(grSA));
 					grSA.table_name = 'x_snc_downloads_download';
 					grSA.table_sys_id = strDownloadSysId;
 					var strSysId = grSA.update();
 
 					Debug('grSA.update() returned: '+RenderValue(strSysId));
+					*/
 
+					
+					// Check the new set of attachment associated to the download record
+					
 					var grSA2 = new GlideRecord('sys_attachment');
 					grSA2.orderByDesc('sys_created_on');
 					grSA2.addQuery('table_name','=','x_snc_downloads_download');
@@ -103,6 +110,15 @@
 					{
 						Debug('sys_attachment: '+RenderValue(grSA2));
 					}
+					
+					
+					// Fire an event to inform users about the new file:
+					var grD = new GlideRecord('x_snc_downloads_download');
+					grD.get(strDownloadSysId);
+					Debug('Triggering event');
+					strMessage = 'There is at least one incident record which does not have any whitelisting.\n';
+					gs.eventQueue('x_snc_downloads.download.updated',grD,'Hello World',strMessage);
+
 
 
 				}
@@ -124,13 +140,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:29:36</sys_created_on>
         <sys_id>9ae8d0acdb416050ba15a3530596194f</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>ExecuteBusinessRule</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_include_9ae8d0acdb416050ba15a3530596194f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-15 15:50:43</sys_updated_on>
+        <sys_updated_on>2021-01-19 09:55:32</sys_updated_on>
     </sys_script_include>
 </record_update>
