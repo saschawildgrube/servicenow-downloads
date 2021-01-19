@@ -116,27 +116,16 @@
 					var grD = new GlideRecord('x_snc_downloads_download');
 					grD.get(strDownloadSysId);
 					Debug('Triggering event on download: '+RenderValue(grD));
-					strMessage = 'Some message.\n';
-					Debug('ONE');
-					gs.eventQueue('x_snc_downloads.download.updated',grD,'Hello World',strMessage,'downloads');
-					Debug('TWO');
 					gs.eventQueue('x_snc_downloads.download.updated',grD,'','');
-					Debug('THREE');
 					
-
-
+					/*
+						In the email text, use ${event.parm1} and ${event.parm2} to refer to the parameters!
+					*/
+					
+					
 				}
-
-
 			}
-
 		}
-
-	/*
-		Debug('Export target: '+RenderValue(export_set.export_target));
-		Debug('Export definiton: '+RenderValue(export_set.export_definition));
-		*/
-		
 	}
 		
 }]]></script>
@@ -144,13 +133,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:29:36</sys_created_on>
         <sys_id>9ae8d0acdb416050ba15a3530596194f</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>ExecuteBusinessRule</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_include_9ae8d0acdb416050ba15a3530596194f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-19 10:58:24</sys_updated_on>
+        <sys_updated_on>2021-01-19 13:56:16</sys_updated_on>
     </sys_script_include>
 </record_update>
