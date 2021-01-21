@@ -37,8 +37,9 @@
 	<ol>
 		<li>Install the Downloads application. If you see this installation guide within the ServiceNow instance, you did this already. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-downloads" target="_blank">repository</a>&#160;and then import the application from source control.</li>
 		<li>Install the DevTools application. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">repository</a>&#160;and then import the application from source control.</li>
-		<li>Check the DevTools version. If a different (more recent) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
-		<li>Follow the installation instruction contained in DevTools/Start.</li>
+		<li>Check the DevTools version. If a different (more recent major) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
+		<li>Follow the installation instruction contained in "DevTools/Start".</li>
+		<li>Execute the test suite at "Downloads/Test Suite".</li>
 	</ol>
 	<h3>Configuration</h3>
 	<ol>
@@ -74,13 +75,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Start</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-21 11:21:17</sys_updated_on>
+        <sys_updated_on>2021-01-21 11:33:27</sys_updated_on>
     </sys_ui_page>
 </record_update>
