@@ -11,27 +11,19 @@
 	padding-left: 20px;
 	">
 	
-	<g2:evaluate var="jvar_strTitle" jelly="true">
-		var grApp = new GlideRecord('sys_app');
-		grApp.addQuery('sys_id','=','1d2ada8c1b09ec10a89720a8ec4bcb79');
-		grApp.query();
-
-		var strTitle = '';
-		while (grApp.next())
-		{
-			strTitle = '<h1>'+grApp.getValue('name')+' '+grApp.getValue('version')+'</h1>';
-		}
-		strTitle;	
-	</g2:evaluate>
-	<g2:no_escape>$[jvar_strTitle]</g2:no_escape>	
+	<g2:no_escape>$[
+		var docapi = new x_snc_devtools.DocumentationAPI('1d2ada8c1b09ec10a89720a8ec4bcb79');
+		docapi.RenderHeader();
+	]</g2:no_escape>
 
 	<p>Welcome to Downloads - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
-	<p>The Downloads application provides access to downloadable files to users. Each "Download" is a record to which access can be managed and files can be attached to. The Downloads app can reassign files that are created in Scheduled Data Exports to a Download record.</p>
+	<p>The Downloads application provides access to downloadable files to users. Each "Download" is a record to which access can be managed and files can be attached to.</p>
+	<p>The Downloads app can copy files that are created in Scheduled Data Exports to a Download record. The Download record can be configured in the Export Set. The Download record will only keep the latest exported file.</p>
 	
 	<h2>System Requirements</h2>
 	<ul>
-		<li>TODO: Madrid, New York, Orlando or Paris</li>
-		<li><a href="https://github.com/saschawildgrube/servicenow-devtools/" target="_blank">DevTools 1.6.0</a></li>
+		<li>New York, Orlando or Paris</li>
+		<li><a href="https://github.com/saschawildgrube/servicenow-devtools/" target="_blank">DevTools 1.8.0</a></li>
 	</ul>
 	
 	<h2>Disclaimer</h2>
@@ -47,19 +39,6 @@
 		<li>Install the DevTools application. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">repository</a>&#160;and then import the application from source control.</li>
 		<li>Check the DevTools version. If a different (more recent) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
 		<li>Follow the installation instruction contained in DevTools/Start.</li>
-		<!--<li>For the time being (due to some weird cross-scope issues) a global business rule must be created: Make an exact copy of the "Downloads - Intercept Attachments" business rule from the "Downloads" scope in the global scope. Then the function ExecuteBusinessRule() (contained in the script include) must be copied into the business rule code. The scope prefix of the function call must also be removed. The code of the new global business rule should look like this: 
-<pre>
-(function executeRule(current, previous /*null when async*/) {
-
-ExecuteBusinessRule(current);
-	
-function ExecuteBusinessRule(record)
-{
-	[...]
-}
-
-})(current, previous);
-</pre></li>-->
 	</ol>
 	<h3>Configuration</h3>
 	<ol>
@@ -69,58 +48,24 @@ function ExecuteBusinessRule(record)
 		<li>Assign the x_snc_downloads.user role to those users who should have read-only access to downloads.</li>
 	</ol>
 
-<h2>Roles</h2>
+	<h2>Roles</h2>
 	<p>Downloads supports the following roles:</p>
-	<ul>
-		<li><b>x_snc_downloads.admin</b>&#160;A user that has access to all Downloads administration and configuration modules. Includes the&#160;<b>x_snc_datasilos.user</b>&#160;role.</li>
-		<li><b>x_snc_downloads.user</b>&#160;A user that can download files.</li>
-	</ul>
-
-	<!--
-		<h2>Configuration Options</h2>
-	<ul>
-	<g2:evaluate var="jvar_strProperties" jelly="true">
-		var HtmlEncode = x_snc_devtools.HtmlEncode;
-		var grSP = new GlideRecord('sys_properties');
-		grSP.addQuery('sys_scope','=','dafbffebdbb78450ba15a353059619eb');
-		grSP.orderBy('name');
-		grSP.query();
-
-		var strProperties = '';
-		while (grSP.next())
-		{
-			var strDescription = HtmlEncode(grSP.getValue('description'));
-		strProperties = strProperties + '<li><b>'+grSP.getValue('name')+'</b>&#160;'+strDescription+'</li>';
-		}
-		strProperties;	
-	</g2:evaluate>
-	<g2:no_escape>$[jvar_strProperties]</g2:no_escape>
-	</ul>
+	<g2:no_escape>$[docapi.RenderRoles()]</g2:no_escape>
 	
-	<h2>Column Fields</h2>
-	<p>Each supported table is equipped with a number of new column fields:</p>
-	<ul>
-		<li><b>x_snc_datasilos_group_whitelist</b>&#160;The group whitelist field stores a list of groups which should have access to the record.</li>
-		<li><b>x_snc_datasilos_supervisor_whitelist</b>&#160;The supervisor whitelist field stores a list of data silos. The users in the supervisor groups within the data silos will be able to access the record.</li>
-		<li><b>x_snc_datasilos_global</b>&#160;The global visibility flag controls if this record should be globally visible - i.e. it can be seen by all users without any exception. This flag can be useful to make very important incidents public to everyone.</li>
-		<li><b>x_snc_datasilos_ghost</b>&#160;The ghost flag controls if the record's whitelists should be updated. If set to false, whitelists are populated. If the ghost flag is true, whitelists remain unchanged. This allows custom implementations to control the whitelist population. If this flag is set to true, the record behaves in the same way as if it was changed by a user with the x_snc_datasilos.ghost role.</li>
-	</ul>
+	<h2>Events</h2>
+	<g2:no_escape>$[docapi.RenderEvents()]</g2:no_escape>	
 
--->
-
+	<h2>Script includes</h2>
+	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>	
+	
 	<h2>License</h2>
-	<p>Copyright 2020-2021 by Sascha Wildgrube</p>
-	<p>Licensed under the Apache License, Version 2.0 (the "License")</p>
-	<p>You may not use Downloads except in compliance with the License.</p>
-	<p>You may obtain a copy of the License at: <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-	<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>	
-	
+	<g2:no_escape>$[docapi.RenderCopyright(2020,'Sascha Wildgrube')]</g2:no_escape>
+	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
 		
 	<h2>Release Notes</h2>
-	<p>No release version available yet.</p>
-<!--	<h3>1.0.0 - 2020-TODO</h3>
-	<p>First baselined version with support for incidents and change requests.</p>
--->
+	<h3>1.0.0 - 2021-01-21</h3>
+	<p>First baselined version.</p>
+
 </div>
 </j:jelly>]]></html>
         <name>Start</name>
@@ -129,13 +74,13 @@ function ExecuteBusinessRule(record)
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Start</sys_name>
-        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-15 16:17:32</sys_updated_on>
+        <sys_updated_on>2021-01-21 11:21:17</sys_updated_on>
     </sys_ui_page>
 </record_update>
