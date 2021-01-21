@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source>0bcff9740a0006d400ae1a384168533a</source>
+        <source_scope display_value="Global">global</source_scope>
+        <source_table>sys_security_acl</source_table>
+        <source_type>11</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-15 15:51:40</sys_created_on>
+        <sys_id>a9c7bb5c1b3d2cd0a89720a8ec4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global</sys_name>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_a9c7bb5c1b3d2cd0a89720a8ec4bcb95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-15 15:51:40</sys_updated_on>
+        <target name="x_snc_downloads_download" target_table="sys_db_object">090305bc1b0d2c10fb896284bb4bcb5c</target>
+        <target_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+</record_update>

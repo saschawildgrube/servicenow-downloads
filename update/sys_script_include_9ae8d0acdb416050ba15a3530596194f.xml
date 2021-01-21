@@ -5,7 +5,7 @@
         <api_name>x_snc_downloads.ExecuteBusinessRule</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
+        <description>This function is the main entry point for the application. Currently it is called by the business rule that responds to a state change in the 'sys_export_set_run' table. Once an export is completed, the function is triggered and the attachment is copied from the ecc queue attachment table to an associated download record.</description>
         <name>ExecuteBusinessRule</name>
         <script><![CDATA[function ExecuteBusinessRule(record)
 {
@@ -23,90 +23,123 @@
 	var IsValidSysId = x_snc_devtools.IsValidSysId;
 
 	var strTable = record.getRecordClassName();
-	// TODO: if this is not the right table, abort!
-
-	Debug('record: '+RenderValue(record));
-
-	
-	// Determine the download record to which the attachment should be added
-	var strDownloadSysId = null;
-	var grES = new GlideRecord('sys_export_set');
-	if (grES.get(record.set))
+	if (strTable == 'sys_export_set_run')
 	{
-		Debug('sys_export_set: '+RenderValue(grES));
-		strDownloadSysId = grES.x_snc_downloads_download;
-	}
-	
-	if (IsValidSysId(strDownloadSysId) == false)
-	{
-		Debug('The export set does not specify a valid download record: '+strDownloadSysId);
-	}
-	else
-	{
-		Debug('The export set has defined a download record: '+strDownloadSysId);
-		
 
-		var grEAA = new GlideRecord('ecc_agent_attachment');
-		if (grEAA.get(record.ecc_agent_attachment) == true)
+		Debug('record: '+RenderValue(record));
+
+
+		// Determine the download record to which the attachment should be added
+		var strDownloadSysId = null;
+		var grES = new GlideRecord('sys_export_set');
+		if (grES.get(record.set))
 		{
-			Debug('ecc_agent_attachment: '+RenderValue(grEAA));
-
-
-			//var strScript = "return new GlideRecord('sys_attachment');";
-			//var RunScriptInGlobalScope = x_snc_devtools.RunScriptInGlobalScope;
-			//var grSA = RunScriptInGlobalScope(strScript);
-			//Debug('Using RunScriptInGlobalScope to get a GlideRecord for sys_attachment: '+RenderValue(grSA));
-
-
-			var grSA = new GlideRecord('sys_attachment');
-			grSA.orderByDesc('sys_created_on');
-			grSA.addQuery('table_name','ecc_agent_attachment');
-			grSA.addQuery('table_sys_id',grEAA.sys_id);
-			//grSA.setLimit(50);
-			grSA.query();
-			while (grSA.next())
-			{
-				Debug('sys_attachment: '+RenderValue(grSA));
-				grSA.table_name = 'x_snc_downloads_download';
-				grSA.table_sys_id = strDownloadSysId;
-				var strSysId = grSA.update();
-
-				Debug('grSA.update() returned: '+RenderValue(strSysId));
-
-				var grSA2 = new GlideRecord('sys_attachment');
-				grSA2.orderByDesc('sys_created_on');
-				grSA2.addQuery('table_name','=','x_snc_downloads_download');
-				grSA2.addQuery('table_sys_id','=',strDownloadSysId);
-				grSA2.query();
-				while (grSA2.next())
-				{
-					Debug('sys_attachment: '+RenderValue(grSA2));
-				}
-
-
-			}
-
-
+			Debug('sys_export_set: '+RenderValue(grES));
+			strDownloadSysId = grES.x_snc_downloads_download;
 		}
+
+		if (IsValidSysId(strDownloadSysId) == false)
+		{
+			Debug('The export set does not specify a valid download record: '+strDownloadSysId);
+		}
+		else
+		{
+			Debug('The export set has defined a download record: '+strDownloadSysId);
+
+
+			var grEAA = new GlideRecord('ecc_agent_attachment');
+			if (grEAA.get(record.ecc_agent_attachment) == true)
+			{
+				Debug('ecc_agent_attachment: '+RenderValue(grEAA));
+
+
+				//var strScript = "return new GlideRecord('sys_attachment');";
+				//var RunScriptInGlobalScope = x_snc_devtools.RunScriptInGlobalScope;
+				//var grSA = RunScriptInGlobalScope(strScript);
+				//Debug('Using RunScriptInGlobalScope to get a GlideRecord for sys_attachment: '+RenderValue(grSA));
+
+
+				var grSA = new GlideRecord('sys_attachment');
+				grSA.orderByDesc('sys_created_on');
+				grSA.addQuery('table_name','ecc_agent_attachment');
+				grSA.addQuery('table_sys_id',grEAA.sys_id);
+				//grSA.setLimit(50);
+				grSA.query();
+				while (grSA.next())
+				{
+					
+					// Identify existing attachments of the download record
+					var gsa = new GlideSysAttachment();
+					var grExistingAttachments = gsa.getAttachments('x_snc_downloads_download', strDownloadSysId);
+					while(grExistingAttachments.next())
+					{
+						Debug('Existing file: '+grExistingAttachments.getValue('file_name'));
+						gsa.deleteAttachment(grExistingAttachments.sys_id);
+					}
+					Debug('After deleting all existing attachments...');
+					
+					grExistingAttachments = gsa.getAttachments('x_snc_downloads_download', strDownloadSysId);
+					while(grExistingAttachments.next())
+					{
+						Debug('Existing file: '+grExistingAttachments.getValue('file_name'));
+					}
 	
+					Debug('...there should not be any attachments left on the download record.');
+				
+					// Create the attachment in the download record:
+					
+					gsa.copy('ecc_agent_attachment',grEAA.sys_id,'x_snc_downloads_download',strDownloadSysId);
+					/*
+					Debug('sys_attachment: '+RenderValue(grSA));
+					grSA.table_name = 'x_snc_downloads_download';
+					grSA.table_sys_id = strDownloadSysId;
+					var strSysId = grSA.update();
+
+					Debug('grSA.update() returned: '+RenderValue(strSysId));
+					*/
+
+					
+					// Check the new set of attachment associated to the download record
+					
+					var grSA2 = new GlideRecord('sys_attachment');
+					grSA2.orderByDesc('sys_created_on');
+					grSA2.addQuery('table_name','=','x_snc_downloads_download');
+					grSA2.addQuery('table_sys_id','=',strDownloadSysId);
+					grSA2.query();
+					while (grSA2.next())
+					{
+						Debug('sys_attachment: '+RenderValue(grSA2));
+					}
+					
+					
+					// Fire an event to inform users about the new file:
+					var grD = new GlideRecord('x_snc_downloads_download');
+					grD.get(strDownloadSysId);
+					Debug('Triggering event on download: '+RenderValue(grD));
+					gs.eventQueue('x_snc_downloads.download.updated',grD,'','');
+					
+					/*
+						In the email text, use ${event.parm1} and ${event.parm2} to refer to the parameters!
+					*/
+					
+					
+				}
+			}
+		}
 	}
-	
-/*
-	Debug('Export target: '+RenderValue(export_set.export_target));
-	Debug('Export definiton: '+RenderValue(export_set.export_definition));
-	*/
+		
 }]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:29:36</sys_created_on>
         <sys_id>9ae8d0acdb416050ba15a3530596194f</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>ExecuteBusinessRule</sys_name>
-        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_include_9ae8d0acdb416050ba15a3530596194f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-12-10 09:30:15</sys_updated_on>
+        <sys_updated_on>2021-01-20 16:38:05</sys_updated_on>
     </sys_script_include>
 </record_update>
