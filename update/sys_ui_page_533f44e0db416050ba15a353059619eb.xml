@@ -17,8 +17,9 @@
 	]</g2:no_escape>
 
 	<p>Welcome to Downloads - created and maintained by&#160;<a href="mailto:sascha.wildgrube@servicenow.com">Sascha Wildgrube</a>.</p>
-	<p>The Downloads application provides access to downloadable files to users. Each "Download" is a record to which access can be managed and files can be attached to.</p>
-	<p>The Downloads app can copy files that are created in Scheduled Data Exports to a Download record. The Download record can be configured in the Export Set. The Download record will only keep the latest exported file.</p>
+	<p>The Downloads application provides access to downloadable files to users. Each download is a record to which access can be managed and files can be attached to.</p>
+	<p>Only active download records are visible to regular users.</p>
+	<p>The Downloads app can copy files that are created in Scheduled Data Exports to a download record. The download record can be configured in the Export Set. The download record will only keep the latest exported file.</p>
 	
 	<h2>System Requirements</h2>
 	<ul>
@@ -43,8 +44,9 @@
 	</ol>
 	<h3>Configuration</h3>
 	<ol>
-		<li>Assign the x_snc_datasilos.admin role to users who are tasked to configure the downloads.</li>
-		<li>As a data silos admin go to the "Downloads" module and set up the download records.</li>
+		<li>Assign the x_snc_datasilos.admin role to users who are tasked to administrate the Downloads application.</li>
+		<li>Assign the x_snc_datasilos.manager role to users who are tasked to configure the download records.</li>
+		<li>As a manager user go to the "Downloads" module and set up the download records.</li>
 		<li>Then you can configure export sets to deliver a file not only to a mid server but also to a defined download record.</li>
 		<li>Assign the x_snc_downloads.user role to those users who should have read-only access to downloads.</li>
 	</ol>
@@ -64,6 +66,13 @@
 	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
 		
 	<h2>Release Notes</h2>
+	
+	<h3>1.1.0 - 2021-01-28</h3>
+	<ol>
+		<li>Introduced the x_snc_downloads.manager role. Users with that role can configure the download records but do not have access to the administration backend.</li>
+		<li>Introduced the active field. Only active download records are visible to regular users.</li>
+	</ol>
+	
 	<h3>1.0.0 - 2021-01-21</h3>
 	<p>First baselined version.</p>
 
@@ -75,13 +84,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>Start</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-21 11:33:27</sys_updated_on>
+        <sys_updated_on>2021-01-28 11:32:45</sys_updated_on>
     </sys_ui_page>
 </record_update>
