@@ -4,19 +4,19 @@
         <source_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</source_scope>
         <status>allowed</status>
         <sys_class_name>sys_scope_privilege</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-01-18 15:58:16</sys_created_on>
-        <sys_id>db06dfd9db392490ba15a35305961970</sys_id>
+        <sys_created_by>_TEST_DOWNLOAD_USER</sys_created_by>
+        <sys_created_on>2021-01-28 11:07:28</sys_created_on>
+        <sys_id>5d6379e01b4e2c14a89720a8ec4bcb1e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>GlideSysAttachment.copy</sys_name>
+        <sys_name>GetIntegerValue</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
-        <sys_update_name>sys_scope_privilege_db06dfd9db392490ba15a35305961970</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-18 15:58:16</sys_updated_on>
-        <target_name>GlideSysAttachment.copy</target_name>
-        <target_scope display_value="Global">global</target_scope>
-        <target_type>scriptable</target_type>
+        <sys_update_name>sys_scope_privilege_5d6379e01b4e2c14a89720a8ec4bcb1e</sys_update_name>
+        <sys_updated_by>_TEST_DOWNLOAD_USER</sys_updated_by>
+        <sys_updated_on>2021-01-28 11:07:28</sys_updated_on>
+        <target_name>GetIntegerValue</target_name>
+        <target_scope display_value="DevTools WORK IN PROGRESS">d689f6901bd38450a89720a8ec4bcbfd</target_scope>
+        <target_type>sys_script_include</target_type>
     </sys_scope_privilege>
 </record_update>
