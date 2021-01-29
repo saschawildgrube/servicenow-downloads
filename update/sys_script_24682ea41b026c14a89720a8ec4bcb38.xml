@@ -2,7 +2,7 @@
     <sys_script action="INSERT_OR_UPDATE">
         <abort_action>false</abort_action>
         <access>package_private</access>
-        <action_delete>false</action_delete>
+        <action_delete>true</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
@@ -15,8 +15,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="sys_attachment">table_name=x_snc_downloads_download^state=available^EQ<item endquery="false" field="table_name" goto="false" newquery="false" operator="=" or="false" value="x_snc_downloads_download"/>
-            <item display_value="Available" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="available"/>
+        <filter_condition table="sys_attachment">table_name=x_snc_downloads_download^EQ<item endquery="false" field="table_name" goto="false" newquery="false" operator="=" or="false" value="x_snc_downloads_download"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -48,17 +47,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>24682ea41b026c14a89720a8ec4bcb38</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Downloads - Attachment update</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_24682ea41b026c14a89720a8ec4bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-28 15:31:05</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:36:37</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=24682ea41b026c14a89720a8ec4bcb38"/>
 </record_update>
