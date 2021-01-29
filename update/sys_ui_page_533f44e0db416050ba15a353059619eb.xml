@@ -7,9 +7,8 @@
         <endpoint>x_snc_downloads_Start.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
-<div style="
-	padding-left: 20px;
-	">
+<div style="padding-left: 20px;">
+<span style="visibility: hidden;">_CUT_HERE_</span>
 	
 	<g2:no_escape>$[
 		var docapi = new x_snc_devtools.DocumentationAPI('1d2ada8c1b09ec10a89720a8ec4bcb79');
@@ -28,24 +27,28 @@
 	</ul>
 	
 	<h2>Disclaimer</h2>
-	<p>DataSilos is&#160;<b>NOT</b>&#160;an officially supported ServiceNow product.</p>
-	<p>DataSilos does&#160;<b>NOT</b>&#160;come with any kind of warranty. If you use it, you own it!</p>
+	<p>Downloads is&#160;<b>NOT</b>&#160;an officially supported ServiceNow product.</p>
+	<p>Downloads does&#160;<b>NOT</b>&#160;come with any kind of warranty. If you use it, you own it!</p>
 
 	
 	<h2>Implementation guide</h2>
 
 	<h3>Installation</h3>
 	<ol>
-		<li>Install the Downloads application. If you see this installation guide within the ServiceNow instance, you did this already. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-downloads" target="_blank">repository</a>&#160;and then import the application from source control.</li>
-		<li>Install the DevTools application. You can fork this&#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">repository</a>&#160;and then import the application from source control.</li>
-		<li>Check the DevTools version. If a different (more recent major) version of DevTools was imported from source control you must create a branch based on the corresponding version tag and switch to that branch.</li>
-		<li>Follow the installation instruction contained in "DevTools/Start".</li>
+		<li>Create an account on GitHub (if not done already).</li>
+		<li>Fork the repository &#160;<a href="https://github.com/saschawildgrube/servicenow-devtools" target="_blank">https://github.com/saschawildgrube/servicenow-devtools</a>.</li>
+		<li>Go to Studio and import the DevTools application from source control.</li> 
+		<li>Check the DevTools version. If an incompatible version of DevTools was imported from source control you must create a branch based on the correct version tag and switch to that branch. </li>
+		<li>Follow the installation instructions contained in "DevTools/Start".</li>
+		<li>Fork the repository &#160;<a href="https://github.com/saschawildgrube/servicenow-downloads" target="_blank">https://github.com/saschawildgrube/servicenow-downloads</a>.</li>
+		<li>Go to Studio and import the Downloads application from source control.</li> 		
+		
 		<li>Execute the test suite at "Downloads/Test Suite".</li>
 	</ol>
 	<h3>Configuration</h3>
 	<ol>
-		<li>Assign the x_snc_datasilos.admin role to users who are tasked to administrate the Downloads application.</li>
-		<li>Assign the x_snc_datasilos.manager role to users who are tasked to configure the download records.</li>
+		<li>Assign the x_snc_downloads.admin role to users who are tasked to administrate the Downloads application.</li>
+		<li>Assign the x_snc_downloads.manager role to users who are tasked to configure the download records.</li>
 		<li>As a manager user go to the "Downloads" module and set up the download records.</li>
 		<li>Then you can configure export sets to deliver a file not only to a mid server but also to a defined download record.</li>
 		<li>Assign the x_snc_downloads.user role to those users who should have read-only access to downloads.</li>
@@ -67,6 +70,10 @@
 		
 	<h2>Release Notes</h2>
 	
+	<h3>1.2.0 - 2021-01-29</h3>
+	<ol>
+		<li>Added the "File updated" field which shows the last point in time when an attachment of a download record was updated.</li>
+	</ol>
 	<h3>1.1.0 - 2021-01-28</h3>
 	<ol>
 		<li>Introduced the x_snc_downloads.manager role. Users with that role can configure the download records but do not have access to the administration backend.</li>
@@ -76,6 +83,7 @@
 	<h3>1.0.0 - 2021-01-21</h3>
 	<p>First baselined version.</p>
 
+<span style="visibility: hidden;">_CUT_HERE_</span>
 </div>
 </j:jelly>]]></html>
         <name>Start</name>
@@ -84,13 +92,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Start</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-28 11:32:45</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:40:26</sys_updated_on>
     </sys_ui_page>
 </record_update>
