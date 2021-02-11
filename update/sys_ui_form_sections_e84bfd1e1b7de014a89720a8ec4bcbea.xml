@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_snc_downloads_download" name="x_snc_downloads_download" sys_domain="global" view="Default view">e84bfd1e1b7de014a89720a8ec4bcbea</sys_ui_form>
-            <sys_ui_section caption="Data Segregation" display_value="Data Segregation" name="x_snc_downloads_download" sys_domain="global" view="Default view">2c4b715e1b7de014a89720a8ec4bcb9f</sys_ui_section>
+            <sys_ui_section display_value="">2c4b715e1b7de014a89720a8ec4bcb9f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2021-01-21 11:55:30</sys_updated_on>
         </sys_ui_form_section>
