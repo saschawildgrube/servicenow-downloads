@@ -76,6 +76,7 @@
 
 	<h3>1.4.0 - 2021-TODO</h3>
 	<ol>
+		<li>The download name field is now mandatory.</li>
 	</ol>
 	
 	<h3>1.3.0 - 2021-02-15</h3>
@@ -109,13 +110,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>Start</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-02-15 18:39:47</sys_updated_on>
+        <sys_updated_on>2021-02-16 09:18:09</sys_updated_on>
     </sys_ui_page>
 </record_update>
