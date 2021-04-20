@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_snc_downloads_download" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Download - Default view" name="x_snc_downloads_download" related_list="NULL" sys_domain="global" view="Default view">7b94d3ba1be3a010f28a0d81ec4bcb62</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>sys_export_set.x_snc_downloads_download</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-20 07:32:47</sys_created_on>
+            <sys_id>f394d3ba1be3a010f28a0d81ec4bcb64</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-20 07:32:47</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Download - Default view</calculated_name>
+            <filter/>
+            <name>x_snc_downloads_download</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-20 07:32:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7b94d3ba1be3a010f28a0d81ec4bcb62</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Download - Default view</sys_name>
+            <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+            <sys_update_name>sys_ui_related_x_snc_downloads_download_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-20 07:32:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
