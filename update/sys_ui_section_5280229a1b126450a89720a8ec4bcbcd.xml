@@ -1,74 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="5280229a1b126450a89720a8ec4bcbcd" sys_domain="global" table="x_snc_downloads_download" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 11:09:45</sys_created_on>
-            <sys_id>5680629a1b126450a89720a8ec4bcb5f</sys_id>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>364af56b1bef2410f28a0d81ec4bcb72</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 11:09:45</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>b64af56b1bef2410f28a0d81ec4bcb72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>3a4af56b1bef2410f28a0d81ec4bcb72</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>1</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 11:09:45</sys_created_on>
-            <sys_id>1e80629a1b126450a89720a8ec4bcb5f</sys_id>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>ba4af56b1bef2410f28a0d81ec4bcb72</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 11:09:45</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 11:09:45</sys_created_on>
-            <sys_id>9e80629a1b126450a89720a8ec4bcb5f</sys_id>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>3e4af56b1bef2410f28a0d81ec4bcb72</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 11:09:45</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>name</element>
-            <position>3</position>
+            <element>attachment_updated</element>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 11:09:45</sys_created_on>
-            <sys_id>1280629a1b126450a89720a8ec4bcb60</sys_id>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>be4af56b1bef2410f28a0d81ec4bcb72</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 11:09:45</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>attachment_updated</element>
-            <position>4</position>
+            <element>attachment_size</element>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 11:09:45</sys_created_on>
-            <sys_id>9280629a1b126450a89720a8ec4bcb60</sys_id>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>324af56b1bef2410f28a0d81ec4bcb73</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 11:09:45</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
             <sys_user/>
             <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-22 08:53:34</sys_created_on>
+            <sys_id>b24af56b1bef2410f28a0d81ec4bcb73</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-22 08:53:34</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
