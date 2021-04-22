@@ -135,9 +135,9 @@
         <sys_id>9ae8d0acdb416050ba15a3530596194f</sys_id>
         <sys_mod_count>27</sys_mod_count>
         <sys_name>ExecuteBusinessRule</sys_name>
-        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_include_9ae8d0acdb416050ba15a3530596194f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-02-24 09:24:26</sys_updated_on>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="number" label="Number" language="en" table="x_snc_downloads_download">
+    <sys_documentation element="attachment_size" label="File size" language="en" table="x_snc_downloads_download">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>attachment_size</element>
             <help/>
             <hint/>
-            <label>Number</label>
+            <label>File size</label>
             <language>en</language>
             <name>x_snc_downloads_download</name>
-            <plural>Numbers</plural>
+            <plural>File sizes</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-12-09 11:09:17</sys_created_on>
-            <sys_id>b238ea8d1bd22050a89720a8ec4bcba9</sys_id>
+            <sys_created_on>2021-04-22 08:51:55</sys_created_on>
+            <sys_id>66e9fd2b1bef2410f28a0d81ec4bcbee</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Number</sys_name>
+            <sys_name>File size</sys_name>
             <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
             <sys_policy/>
             <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_downloads_download_number_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_snc_downloads_download_attachment_size_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-12-09 11:09:17</sys_updated_on>
+            <sys_updated_on>2021-04-22 08:51:55</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>
