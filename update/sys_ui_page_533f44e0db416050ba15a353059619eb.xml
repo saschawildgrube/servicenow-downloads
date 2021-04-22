@@ -4,7 +4,7 @@
         <client_script/>
         <description/>
         <direct>false</direct>
-        <endpoint>x_snc_downloads_Start.do</endpoint>
+        <endpoint>x_snc_downloads_start.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <div style="padding-left: 20px;">
@@ -73,6 +73,11 @@
 		
 	<h2>Release Notes</h2>
 
+	<h3>1.5.0 - 2021-TODO</h3>
+	<ol>
+		<li>TODO</li> 
+	</ol>	
+	
 	<h3>1.4.0 - 2021-04-22</h3>
 	<ol>
 		<li>DevTools 1.14.0 is required.</li>
@@ -106,19 +111,19 @@
 <span style="visibility: hidden;">_CUT_HERE_</span>
 </div>
 </j:jelly>]]></html>
-        <name>Start</name>
+        <name>start</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>50</sys_mod_count>
-        <sys_name>Start</sys_name>
-        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>start</sys_name>
+        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-04-22 09:22:34</sys_updated_on>
+        <sys_updated_on>2021-04-22 12:23:17</sys_updated_on>
     </sys_ui_page>
 </record_update>
