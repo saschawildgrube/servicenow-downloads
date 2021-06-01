@@ -17,8 +17,7 @@
 	{
 		x_snc_downloads.Log('ExecuteBusinessRule: '+record.getRecordClassName()+': '+strText);
 	}
-	
-	
+		
 	var RenderValue = x_snc_devtools.RenderValue;
 	var IsValidSysId = x_snc_devtools.IsValidSysId;
 	var BusinessRuleGetOperation = x_snc_devtools.BusinessRuleGetOperation;
@@ -141,22 +140,6 @@
 		var strDownloadSysId = GetStringValue(record.table_sys_id);
 		
 		if (   strOperation == 'update'
-			|| strOperation == 'insert')
-		{
-			// Fire an event to inform users about the new file:
-			var grD = new GlideRecord('x_snc_downloads_download');
-			if (grD.get(strDownloadSysId))
-			{
-				if (grD.active == true)
-				{
-					//Debug('Triggering event on download: '+RenderValue(grD));
-					gs.eventQueue('x_snc_downloads.download.updated',grD,'','');
-					// HINT: In the email text, use ${event.parm1} and ${event.parm2} to refer to the parameters!
-				}
-			}
-		}
-		
-		if (   strOperation == 'update'
 			|| strOperation == 'insert'
 			|| strOperation == 'delete')
 		{
@@ -178,12 +161,37 @@
 				{
 					nTotalSize += GetIntegerValue(grSA.size_bytes);
 				}
-				grDownload.attachment_updated = current.sys_updated_on;
 				grDownload.attachment_size = RenderBytes(nTotalSize);
+				if (nTotalSize == 0)
+				{
+					grDownload.attachment_updated = '';
+				}
+				else
+				{
+					grDownload.attachment_updated = current.sys_updated_on;
+				}
 				grDownload.update();
 			}
 			
 			
+		}
+		
+		if (strOperation == 'update')
+		{
+			// One might expect that we should fire the event also when the attachment is inserted,
+			// but this would lead to two events being fired...
+			
+			// Fire an event to inform users about the new file:
+			var grD = new GlideRecord('x_snc_downloads_download');
+			if (grD.get(strDownloadSysId))
+			{
+				if (grD.active == true)
+				{
+					//Debug('Triggering event on download: '+RenderValue(grD));
+					gs.eventQueue('x_snc_downloads.download.updated',grD,grD.attachment_updated,'');
+					// HINT: In the email text, use ${event.parm1} and ${event.parm2} to refer to the parameters!
+				}
+			}
 		}
 		return;
 	}
@@ -193,13 +201,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:29:36</sys_created_on>
         <sys_id>9ae8d0acdb416050ba15a3530596194f</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>ExecuteBusinessRule</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_include_9ae8d0acdb416050ba15a3530596194f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-20 07:58:28</sys_updated_on>
+        <sys_updated_on>2021-05-20 09:44:11</sys_updated_on>
     </sys_script_include>
 </record_update>

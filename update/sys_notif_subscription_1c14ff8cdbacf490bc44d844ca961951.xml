@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_notif_subscription">
+    <sys_notif_subscription action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <affected_record/>
+        <affected_table/>
+        <condition/>
+        <devices>de64f3ccdbacf490bc44d844ca961973</devices>
+        <filter/>
+        <name>New incident</name>
+        <notification display_value="Incident Opened and Unassigned">0d539c30c0a80164013cc05fcf7e5573</notification>
+        <schedule/>
+        <sys_class_name>sys_notif_subscription</sys_class_name>
+        <sys_created_by>abel.tuter</sys_created_by>
+        <sys_created_on>2021-05-31 13:49:54</sys_created_on>
+        <sys_id>1c14ff8cdbacf490bc44d844ca961951</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>New incident</sys_name>
+        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_notif_subscription_1c14ff8cdbacf490bc44d844ca961951</sys_update_name>
+        <sys_updated_by>abel.tuter</sys_updated_by>
+        <sys_updated_on>2021-05-31 13:51:24</sys_updated_on>
+        <user display_value="Abel Tuter">62826bf03710200044e0bfc8bcbe5df1</user>
+    </sys_notif_subscription>
+</record_update>
