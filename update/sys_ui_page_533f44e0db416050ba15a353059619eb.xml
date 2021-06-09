@@ -19,6 +19,7 @@
 	<p>The Downloads application provides access to downloadable files to users. Each download is a record to which access can be managed and files can be attached to.</p>
 	<p>Only active download records are visible to regular users.</p>
 	<p>The Downloads app can copy files that are created in Scheduled Data Exports to a download record. The download record can be configured in the Export Set. The download record will only keep the latest exported file.</p>
+	<p>Whenever the files are updated an event is fired that triggers a notification to users who are watching the download record. Users can watch and unwatch a download record by clicking the corresponding button on the download record form.</p> 
 	
 	<h2>System Requirements</h2>
 	<ul>
@@ -120,13 +121,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>start</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-05-20 08:14:29</sys_updated_on>
+        <sys_updated_on>2021-06-09 11:00:48</sys_updated_on>
     </sys_ui_page>
 </record_update>
