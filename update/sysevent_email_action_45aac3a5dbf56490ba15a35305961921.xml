@@ -35,7 +35,7 @@
         <item_table>x_snc_downloads_download</item_table>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>A new download is available for ${name}: <a title="Download" href="{INSTANCE_URL}/nav_to.do?uri=%2Fx_snc_downloads_download.do%3Fsys_id%3${sys_id}">Download</a></p>]]></message_html>
+        <message_html><![CDATA[<p>${mail_script:download.updated}</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>New download available</name>
@@ -49,7 +49,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>A new download is available for ${name}</subject>
+        <subject/>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -57,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>45aac3a5dbf56490ba15a35305961921</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>New download available</sys_name>
         <sys_overrides/>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
@@ -65,7 +65,7 @@
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sysevent_email_action_45aac3a5dbf56490ba15a35305961921</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-06-01 10:20:14</sys_updated_on>
+        <sys_updated_on>2021-06-09 12:10:22</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
