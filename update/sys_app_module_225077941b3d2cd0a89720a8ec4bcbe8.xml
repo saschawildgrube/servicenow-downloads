@@ -18,7 +18,7 @@
         <name>syslog_app_scope</name>
         <order>150</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>&amp;sysparm_view_forced=true</query>
+        <query>&amp;sysparm_view_forced=true&amp;sysparm_order=sequence&amp;sysparm_order_direction=desc</query>
         <report/>
         <roles>x_snc_downloads.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>225077941b3d2cd0a89720a8ec4bcbe8</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Logs</sys_name>
         <sys_overrides/>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_app_module_225077941b3d2cd0a89720a8ec4bcbe8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-01-15 15:22:52</sys_updated_on>
+        <sys_updated_on>2021-06-10 15:13:34</sys_updated_on>
         <timeline_page/>
         <title>Logs</title>
         <uncancelable>false</uncancelable>
