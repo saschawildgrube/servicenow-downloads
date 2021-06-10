@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_downloads.ExecuteMail</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ExecuteMail</name>
+        <script><![CDATA[function ExecuteMail(current,template,email,email_action,event)
+{
+	// Documentation:
+	// https://docs.servicenow.com/bundle/quebec-servicenow-platform/page/script/server-scripting/reference/r_ExScptEmlNtfn.html
+	
+	
+	function Debug(strText)
+	{
+		x_snc_downloads.Debug('ExecuteMail: '+strText);
+	}
+	
+	var RenderValue = x_snc_devtools.RenderValue;
+	var GetInstanceURL = x_snc_devtools.GetInstanceURL;
+	
+	var strUrl = GetInstanceURL() + 'nav_to.do?uri=%2Fx_snc_downloads_download.do%3Fsys_id%3D'+current.sys_id;
+	
+	var strSubject = 'A new download is available for '+current.name;
+	var strBody = '<p>A new download is available for '+current.name+': <a title="Download" href="'+strUrl+'">Download</a></p>';
+
+	email.setSubject(strSubject);
+	email.setBody(strBody);
+	
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-09 11:14:09</sys_created_on>
+        <sys_id>8da6254fdb2074943c6c09c2ba961979</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>ExecuteMail</sys_name>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_script_include_8da6254fdb2074943c6c09c2ba961979</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-09 14:21:49</sys_updated_on>
+    </sys_script_include>
+</record_update>

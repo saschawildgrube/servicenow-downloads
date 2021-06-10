@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Export Set</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Export Set</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Application File" name="Application File">5e238a23db0310103c6c09c2ba9619e9</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-29 08:43:09</sys_created_on>
+        <sys_id>6a0bb539db732090bc44d844ca961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Export Set</sys_name>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_wizard_answer_6a0bb539db732090bc44d844ca961948</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-29 08:43:09</sys_updated_on>
+        <table/>
+        <target_url>sys_export_set.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

@@ -3,41 +3,27 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 12:48:53</sys_created_on>
+            <sys_created_on>2021-04-29 08:43:15</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>2a3732161b926450a89720a8ec4bcb85</sys_id>
+            <sys_id>c41b3939db732090bc44d844ca961916</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_snc_downloads_download" name="x_snc_downloads_download" sys_domain="global" view="Default view">d23732161b926450a89720a8ec4bcb84</sys_ui_form>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_downloads_download" sys_domain="global" view="Default view">5280229a1b126450a89720a8ec4bcbcd</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 12:48:53</sys_updated_on>
-        </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 12:48:53</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>e23732161b926450a89720a8ec4bcb87</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_snc_downloads_download" name="x_snc_downloads_download" sys_domain="global" view="Default view">d23732161b926450a89720a8ec4bcb84</sys_ui_form>
-            <sys_ui_section caption="Data Segregation" display_value="Data Segregation" name="x_snc_downloads_download" sys_domain="global" view="Default view">223732161b926450a89720a8ec4bcb86</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 12:48:53</sys_updated_on>
+            <sys_updated_on>2021-04-29 08:43:15</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_snc_downloads_download</name>
             <roles/>
             <sys_class_name>sys_ui_form</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-02-15 12:48:53</sys_created_on>
+            <sys_created_on>2021-01-21 11:55:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d23732161b926450a89720a8ec4bcb84</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_name>x_snc_downloads_download</sys_name>
             <sys_overrides/>
             <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
@@ -45,7 +31,7 @@
             <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
             <sys_update_name>sys_ui_form_sections_d23732161b926450a89720a8ec4bcb84</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-02-15 12:48:53</sys_updated_on>
+            <sys_updated_on>2021-02-15 11:48:29</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

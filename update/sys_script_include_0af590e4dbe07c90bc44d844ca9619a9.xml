@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_downloads.WatchListAddUser</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Adds a user to the watchlist of the given record.</description>
+        <name>WatchListAddUser</name>
+        <script><![CDATA[function WatchListAddUser(record,strUserSysId)
+{
+	var GetArrayValue = x_snc_devtools.GetArrayValue;
+	var GetStringValue = x_snc_devtools.GetStringValue;
+	var ArrayUnique = x_snc_devtools.ArrayUnique;
+	
+	var aWatchList = GetArrayValue(GetStringValue(record.watch_list));
+	aWatchList.push(strUserSysId);
+	aWatchList = ArrayUnique(aWatchList);
+	record.watch_list = GetStringValue(aWatchList);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-01 10:58:04</sys_created_on>
+        <sys_id>0af590e4dbe07c90bc44d844ca9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WatchListAddUser</sys_name>
+        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_update_name>sys_script_include_0af590e4dbe07c90bc44d844ca9619a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-01 10:58:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

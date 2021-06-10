@@ -4,7 +4,7 @@
         <client_script/>
         <description/>
         <direct>false</direct>
-        <endpoint>x_snc_downloads_Start.do</endpoint>
+        <endpoint>x_snc_downloads_start.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <div style="padding-left: 20px;">
@@ -19,11 +19,12 @@
 	<p>The Downloads application provides access to downloadable files to users. Each download is a record to which access can be managed and files can be attached to.</p>
 	<p>Only active download records are visible to regular users.</p>
 	<p>The Downloads app can copy files that are created in Scheduled Data Exports to a download record. The download record can be configured in the Export Set. The download record will only keep the latest exported file.</p>
+	<p>Whenever the files are updated an event is fired that triggers a notification to users who are watching the download record. Users can watch and unwatch a download record by clicking the corresponding button on the download record form.</p> 
 	
 	<h2>System Requirements</h2>
 	<ul>
-		<li>New York, Orlando, Paris or Quebec</li>
-		<li><a href="https://github.com/saschawildgrube/servicenow-devtools/" target="_blank">DevTools 1.14.0</a></li>
+		<li>Orlando, Paris or Quebec</li>
+		<li><a href="https://github.com/saschawildgrube/servicenow-devtools/" target="_blank">DevTools 1.16.0</a></li>
 	</ul>
 	
 	<h2>Disclaimer</h2>
@@ -73,6 +74,17 @@
 		
 	<h2>Release Notes</h2>
 
+	<h3>1.5.0 - 2021-06-10</h3>
+	<ol>
+		<li>New York is no longer actively supported.</li>
+		<li>DevTools 1.16.0 is required.</li>
+		<li>The "File size" field now represents the sum of all attachments of the download record.</li>
+		<li>The "File updated" field is now cleared once the last attachment is removed from a download record.</li>
+		<li>The "active" field is no longer visible to regular users.</li>
+		<li>Update events are now only fired for active download records.</li>
+		<li>Notification mails are sent to users who are actively watching the updated download record.</li>
+	</ol>	
+	
 	<h3>1.4.0 - 2021-04-22</h3>
 	<ol>
 		<li>DevTools 1.14.0 is required.</li>
@@ -106,19 +118,19 @@
 <span style="visibility: hidden;">_CUT_HERE_</span>
 </div>
 </j:jelly>]]></html>
-        <name>Start</name>
+        <name>start</name>
         <processing_script/>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>50</sys_mod_count>
-        <sys_name>Start</sys_name>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_name>start</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-04-22 09:22:34</sys_updated_on>
+        <sys_updated_on>2021-06-10 09:22:23</sys_updated_on>
     </sys_ui_page>
 </record_update>

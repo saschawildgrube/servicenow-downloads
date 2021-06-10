@@ -20,7 +20,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Downloads - Attachment update</name>
+        <name>Downloads - sys_attachment</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,15 +31,7 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	x_snc_devtools.Debug('Downloads: Business rule: sys_attachment: '+x_snc_devtools.RenderValue(current));
-	
-	var grDownload = new GlideRecord('x_snc_downloads_download');
-	if (grDownload.get(current.table_sys_id))
-	{
-		grDownload.attachment_updated = current.sys_updated_on;
-		grDownload.attachment_size = x_snc_devtools.RenderBytes(current.size_bytes);
-		grDownload.update();
-	}
+	ExecuteBusinessRule(current);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -48,15 +40,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>24682ea41b026c14a89720a8ec4bcb38</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Downloads - Attachment update</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Downloads - sys_attachment</sys_name>
         <sys_overrides/>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_script_24682ea41b026c14a89720a8ec4bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-04-22 08:55:48</sys_updated_on>
+        <sys_updated_on>2021-05-20 07:31:15</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
