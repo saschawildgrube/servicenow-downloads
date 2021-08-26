@@ -47,21 +47,21 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>1</sizeclass>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 11:09:16</sys_created_on>
-        <sys_id>fe0bb539db732090bc44d844ca96196c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>49e7230c1b5e34505331b8449b4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_downloads_download</sys_name>
         <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
-        <sys_update_name>sys_dictionary_x_snc_downloads_download_null</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-07 10:35:00</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_snc_downloads_download_NULL</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 12:46:21</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
