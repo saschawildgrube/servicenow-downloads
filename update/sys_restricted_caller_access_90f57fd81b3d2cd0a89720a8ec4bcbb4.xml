@@ -18,7 +18,7 @@
         <sys_update_name>sys_restricted_caller_access_90f57fd81b3d2cd0a89720a8ec4bcbb4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-01-15 15:43:40</sys_updated_on>
-        <target name="x_snc_downloads_download" target_table="sys_db_object">090305bc1b0d2c10fb896284bb4bcb5c</target>
+        <target name="x_snc_downloads_download" target_table="sys_db_object">ce53e6621b267010edf3642aab4bcb37</target>
         <target_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>
