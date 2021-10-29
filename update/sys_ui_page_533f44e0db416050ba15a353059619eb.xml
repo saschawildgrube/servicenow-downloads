@@ -25,7 +25,7 @@
 	<ul>
 		<g2:no_escape>$[
 			docapi.RenderSystemRequirements(
-				'Orlando,Paris,Quebec',
+				'Paris,Quebec,Rome',
 				true,
 				AppGetDependencies());
 		]</g2:no_escape>	
@@ -34,7 +34,7 @@
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>
 	
-	<h2>Implementation guide</h2>
+	<h2>Implementation Guide</h2>
 
 	<h3>Installation</h3>
 	<ol>
@@ -68,7 +68,7 @@
 	<g2:no_escape>$[docapi.RenderEvents()]</g2:no_escape>	
 
 	<!--
-	<h2>Script includes</h2>
+	<h2>Script Includes</h2>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>	
 	-->	
 
@@ -78,6 +78,12 @@
 		
 	<h2>Release Notes</h2>
 
+	<h3>1.6.0 - 2021-10-29</h3>
+	<ol>
+		<li>Rome is now supported.</li>
+		<li>Orlando is no longer actively supported.</li>
+	</ol>
+	
 	<h3>1.5.2 - 2021-09-14</h3>
 	<ol>
 		<li>DevTools 1.22.0 is required.</li>
@@ -143,13 +149,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-09 10:47:22</sys_created_on>
         <sys_id>533f44e0db416050ba15a353059619eb</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>start</sys_name>
         <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
         <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_ui_page_533f44e0db416050ba15a353059619eb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-14 13:15:01</sys_updated_on>
+        <sys_updated_on>2021-10-29 20:16:14</sys_updated_on>
     </sys_ui_page>
 </record_update>
