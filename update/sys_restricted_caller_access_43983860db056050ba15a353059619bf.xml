@@ -12,14 +12,14 @@
         <sys_id>43983860db056050ba15a353059619bf</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>global</sys_name>
-        <sys_package display_value="Downloads" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
+        <sys_package display_value="Downloads WORK IN PROGRESS" source="x_snc_downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
+        <sys_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</sys_scope>
         <sys_update_name>sys_restricted_caller_access_43983860db056050ba15a353059619bf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-12-09 13:47:50</sys_updated_on>
         <target name="x_snc_downloads_download" target_table="sys_db_object">ce53e6621b267010edf3642aab4bcb37</target>
-        <target_scope display_value="Downloads">1d2ada8c1b09ec10a89720a8ec4bcb79</target_scope>
+        <target_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>
     </sys_restricted_caller_access>
