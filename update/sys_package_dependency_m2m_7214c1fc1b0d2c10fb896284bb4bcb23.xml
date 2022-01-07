@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Basic Export Set Functionality" source="com.glide.system_export_set">96d97d9e1b263010edf3642aab4bcbdc</dependency>
+        <dependency display_value="Basic Export Set Functionality" source="com.glide.system_export_set">fe1d3e91db540110b652edb30596193f</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-10 09:16:33</sys_created_on>
