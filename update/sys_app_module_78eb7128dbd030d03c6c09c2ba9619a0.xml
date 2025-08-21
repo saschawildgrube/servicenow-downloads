@@ -17,6 +17,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query>/sysevent_list.do?sysparm_query=nameSTARTSWITHx_snc_downloads^sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()&amp;sysparm_order=sys_created_on&amp;sysparm_order_direction=desc</query>
         <report/>
+        <require_confirmation>false</require_confirmation>
         <roles>x_snc_downloads.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>

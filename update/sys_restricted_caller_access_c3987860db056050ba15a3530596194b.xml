@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
     <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <description/>
         <operation>read</operation>
+        <rca_type/>
         <source>0c653a510a0a0b8201235eb342bc50c4</source>
         <source_scope display_value="Global">global</source_scope>
         <source_table>sys_security_acl</source_table>
@@ -18,7 +20,7 @@
         <sys_update_name>sys_restricted_caller_access_c3987860db056050ba15a3530596194b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-12-09 13:47:50</sys_updated_on>
-        <target name="x_snc_downloads_download" target_table="sys_db_object">e5c1921fdb34c154bcced03cd39619f5</target>
+        <target name="x_snc_downloads_download" target_table="sys_db_object">0e7310de939a1210ae97b4aa6aba101b</target>
         <target_scope display_value="Downloads WORK IN PROGRESS">1d2ada8c1b09ec10a89720a8ec4bcb79</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>

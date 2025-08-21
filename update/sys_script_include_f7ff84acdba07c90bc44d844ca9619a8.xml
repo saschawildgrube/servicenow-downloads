@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Checks if a given user is watching the given record</description>
+        <mobile_callable>false</mobile_callable>
         <name>IsUserWatching</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[function IsUserWatching(strUserSysId, record)
 {
 	var GetStringValue = x_snc_devtools.GetStringValue;
@@ -39,5 +41,6 @@
         <sys_update_name>sys_script_include_f7ff84acdba07c90bc44d844ca9619a8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-11-30 09:23:58</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
 </record_update>

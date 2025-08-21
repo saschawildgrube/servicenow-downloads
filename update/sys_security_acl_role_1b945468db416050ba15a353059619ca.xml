@@ -14,6 +14,5 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-12-09 11:11:24</sys_updated_on>
         <sys_user_role display_value="x_snc_downloads.user" name="x_snc_downloads.user">99bbc0acdb016050ba15a353059619f1</sys_user_role>
-        <transaction_id>8394d068db416050ba15a3530596195f</transaction_id>
     </sys_security_acl_role>
 </record_update>
